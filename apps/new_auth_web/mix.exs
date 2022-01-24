@@ -37,8 +37,8 @@ defmodule NewAuthWeb.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [ 
-      
-      {:phoenix, "~> 1.6.6"},
+      {:phoenix, "~> 1.5.2"},
+      {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
@@ -62,7 +62,7 @@ defmodule NewAuthWeb.MixProject do
     [
       setup: ["deps.get"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.deploy": ["esbuild default --minify", "phx.digest"]
+      "assets.deploy": ["esbuild default --minify", "tailwind default --minify", "phx.digest"]
     ]
   end
 end
