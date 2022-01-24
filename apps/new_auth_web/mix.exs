@@ -36,7 +36,8 @@ defmodule NewAuthWeb.MixProject do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [
+    [ 
+      
       {:phoenix, "~> 1.6.6"},
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.0"},
