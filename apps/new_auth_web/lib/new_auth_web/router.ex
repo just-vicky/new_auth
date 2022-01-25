@@ -62,9 +62,9 @@ defmodule NewAuthWeb.Router do
   scope "/", NewAuthWeb do
     pipe_through [:browser, :redirect_if_user_is_authenticated]
 
-    get "/users/register", UserRegistrationController, :new
+    get "/register", UserRegistrationController, :new
     post "/users/register", UserRegistrationController, :create
-    get "/users/log_in", UserSessionController, :new
+    get "/login", UserSessionController, :new
     post "/users/log_in", UserSessionController, :create
     get "/users/reset_password", UserResetPasswordController, :new
     post "/users/reset_password", UserResetPasswordController, :create

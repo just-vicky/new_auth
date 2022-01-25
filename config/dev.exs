@@ -25,6 +25,7 @@ config :new_auth_web, NewAuthWeb.Endpoint,
   secret_key_base: "eSWcE852bZx05uKlqtBXHVG9G/Jk/HnySevjxy8jD/xpFHRhbP2vIs2Abfjzyr+T",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
